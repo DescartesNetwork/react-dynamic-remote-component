@@ -3,3 +3,4 @@ node_modules
 src
 babel.config.js
 rollup.config.jstsconfig.js
+.github

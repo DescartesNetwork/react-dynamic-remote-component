@@ -18,9 +18,9 @@ export const loadModule = (url: string, scope: string, module: string) => {
       const Module = factory();
 
       return Module;
-    } catch (e) {
+    } catch (e: any) {
       const error = new Error(
-        `There was a problem loading the remote module. Please check the parameters (url: ${url} scope: ${scope} module: ${module})`
+        `There was a problem loading the remote module. Please check the parameters (url: ${url} scope: ${scope} module: ${module}). Details:\n\n${e.message}`
       );
       error.name = "RemoteModuleLoadingError";
       throw error;
